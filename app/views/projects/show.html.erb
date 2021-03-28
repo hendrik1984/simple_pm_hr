@@ -1,28 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="card">
+  <div class="card-body">
+    <h2 class"card-title d-flex justify-content-between mb-4">
+      <span><%= @project.name %></span>
+      <div>
+        <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-warning' %>
+        <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      </div>
+    </h2>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+    <br>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
+    <h6>Add task</h6>
 
-<p>
-  <strong>User:</strong>
-  <%= @project.user_id %>
-</p>
+    <%= form_with(model: [@task.project, @task]) do |f| %>
+      <% if @task.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+          <ul>
+          <% @task.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-<hr>
+      <div class="input-group">
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Enter task name...' %>
+        <div class="input-group-append">
 
-<h1>New task</h1>
+        </div>
 
-<%= render 'tasks/form' %>
+        <%= f.submit class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+%= link_to 'Back', projects_path %>
 
 <hr>
 
