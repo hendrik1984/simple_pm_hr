@@ -23,3 +23,7 @@ Things you may want to cover:
 
 * Reference
 => https://www.youtube.com/watch?v=u2o_new-T0o
+
+* Github Linter Reference
+=> https://github.com/github/super-linter
+
