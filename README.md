@@ -22,8 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * Reference
-=> https://www.youtube.com/watch?v=u2o_new-T0o
+=> [Context: "https://www.youtube.com/watch?v=u2o_new-T0o"]
 
 * Github Linter Reference
-=> https://github.com/github/super-linter
+=> [Context: "https://github.com/github/super-linter"]
 
