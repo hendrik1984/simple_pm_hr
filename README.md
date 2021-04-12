@@ -1,5 +1,7 @@
 # README
 
+[![GitHub Super-Linter](https://github.com/hendrik1984/simple_pm_hr/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
