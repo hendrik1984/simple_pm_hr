@@ -16,11 +16,14 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     # @project = Project.new
+    asdf
+    @project = "bad code"
     @project = current_user.projects.build
   end
 
   # GET /projects/1/edit
   def edit
+    "bad code"
   end
 
   # POST /projects or /projects.json
