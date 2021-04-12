@@ -33,7 +33,7 @@ jobs:
           fetch-depth: 0
 
       - name: Create workspace
-        run: mkdir '${{ github.workspace }}/quality_gate'
+        run: mkdir '/quality_gate'
 
       ################################
       # Run Linter against code base #
