@@ -22,7 +22,6 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
-    "bad code"
   end
 
   # POST /projects or /projects.json
