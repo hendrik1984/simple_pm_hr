@@ -32,9 +32,6 @@ jobs:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
 
-      - name: Create workspace
-        run: mkdir '/quality_gate'
-
       ################################
       # Run Linter against code base #
       ################################
@@ -44,4 +41,3 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OUTPUT_FOLDER: '${{ github.workspace }}/quality_gate'
