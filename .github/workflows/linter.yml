@@ -27,11 +27,11 @@ jobs:
       # Checkout the code base #
       ##########################
       - name: Checkout Code Into Main
-        run: mkdir '${{ github.workspace }}'
         uses: actions/checkout@v2
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
+        run: mkdir '${{ github.workspace }}'
 
       ################################
       # Run Linter against code base #
