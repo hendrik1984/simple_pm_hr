@@ -5,6 +5,7 @@
 #############################
 on:
   push:
+    branches: main
   pull_request:
     branches: main
 
@@ -14,7 +15,7 @@ on:
 jobs:
   build:
     # Name the Job
-    name: Testing Lint Code Base
+    name: Ruby Lint Code Base
     # Set the agent to run on
     runs-on: ubuntu-latest
 
@@ -26,6 +27,7 @@ jobs:
       # Checkout the code base #
       ##########################
       - name: Checkout Code Into Main
+        run: mkdir '${{ github.workspace }}'
         uses: actions/checkout@v2
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
@@ -40,4 +42,4 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OUTPUT_FOLDER: .
+          OUTPUT_FOLDER: ${{ github.workspace }}
