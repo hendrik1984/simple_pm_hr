@@ -16,7 +16,6 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     # @project = Project.new
-    @project = "bad code"
     @project = current_user.projects.build
   end
 
