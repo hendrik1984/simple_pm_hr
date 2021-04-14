@@ -1,26 +1,26 @@
-require: rubocop-rails
+# require: rubocop-rails
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
+# Style/FrozenStringLiteralComment:
+#   Enabled: false
 
-Style/Documentation:
-  Enabled: false
+# Style/Documentation:
+#   Enabled: false
 
-Lint/PercentStringArray:
-  Enabled: false
+# Lint/PercentStringArray:
+#   Enabled: false
 
-AllCops:
-  Exclude:
-    - 'Gemfile'
-    - 'db/**/*'
-    - 'config/**/*'
-    - 'script/**/*'
-    - 'bin/{rails,rake}'
-    - 'test/*'
-    - 'test/system/*'
-    - 'test/models/*'
-    - 'test/controllers/*'
-    - 'test/channels/**/*'
-    - 'node_modules/**/*'
-    - 'bin/**'
-    - !ruby/regexp /old_and_unused\.rb$/
+# AllCops:
+#   Exclude:
+#     - 'Gemfile'
+#     - 'db/**/*'
+#     - 'config/**/*'
+#     - 'script/**/*'
+#     - 'bin/{rails,rake}'
+#     - 'test/*'
+#     - 'test/system/*'
+#     - 'test/models/*'
+#     - 'test/controllers/*'
+#     - 'test/channels/**/*'
+#     - 'node_modules/**/*'
+#     - 'bin/**'
+#     - !ruby/regexp /old_and_unused\.rb$/
