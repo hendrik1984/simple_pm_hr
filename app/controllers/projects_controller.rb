@@ -13,6 +13,10 @@ class ProjectsController < ApplicationController
     @task = @project.tasks.build
   end
 
+  def badCode
+    @hello = 'world'
+  end
+
   # GET /projects/new
   def new
     # @project = Project.new
